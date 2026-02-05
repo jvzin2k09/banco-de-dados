@@ -1,0 +1,129 @@
+USE copa_do_mundo; -- selecionar o banco de dado
+SHOW TABLES; -- mostrar as tabelas do banco de dado
+DESC jogadores; -- mostrar as configs da tabela
+
+INSERT INTO grupos(nome)
+VALUES ("A"),
+       ("B"),
+       ("C"),
+       ("D"),
+       ("E"),
+       ("F"),
+       ("G");
+SELECT * FROM grupos;
+
+INSERT INTO selecoes(nome, qtd_copa_vencida, id_grupo)
+VALUES ("Brasil", 5, 1),
+       ("Alemanha", 4, 1),
+       ("Franca", 4, 1),
+       ("Argentina", 3, 1),
+       ("Italia", 4, 2),
+       ("Chile", 0, 2),
+       ("Uruguai", 2, 2),
+       ("Inglaterra", 1, 2),
+       ("México", 0, 3),
+       ("Polonia", 0, 3),
+       ("Japao", 0, 3),
+       ("Gana", 0, 3),
+       ("Equador", 0, 4),
+       ("Venezuela", 0, 4),
+       ("Canada", 0, 4),
+       ("Suecia", 0, 4),
+       ("Russia", 0, 5),
+       ("Portugal", 0, 5),
+       ("Argelia", 0, 5),
+       ("Marrocos", 0, 5),
+       ("Servia", 0, 6),
+       ("Holanda", 0, 6),
+       ("Coreia do Sul", 0, 6),
+       ("Hungria", 0, 6),
+       ("Camaroes", 0, 7),
+       ("Belgica", 0, 7),
+       ("Espanha", 1, 7),
+       ("Egito", 0, 7);
+       
+       SELECT * FROM selecoes;
+       
+       INSERT INTO jogadores(nome, n_camisa, id_selecao)
+       VALUES ("Pelé", 10, 1),
+       ("Müller", 13, 2),
+       ("Mbappé", 10, 3),
+       ("Messi", 10, 4),
+       ("Baggio", 10, 5),
+       ("Alexis Sánchez", 7, 6),
+       ("Suárez", 9, 7),
+       ("Harry Kane", 9, 8),
+       ("Chicharito", 14, 9),
+       ("Lewandowski", 9, 10),
+       ("Endo", 6, 11),
+       ("Asamoah Gyan", 3, 12),
+       ("Enner Valencia", 13, 13),
+       ("Rondón", 23, 14),
+       ("Alphonso Davies", 19, 15),
+       ("Ibrahimović", 11, 16),
+       ("Yashin", 1, 17),
+       ("Cristiano Ronaldo", 7, 18),
+       ("Mahrez", 7, 19),
+       ("Hakimi", 2, 20),
+       ("Mitrović", 9, 21),
+       ("Robben", 11, 22),
+       ("Son", 7, 23),
+       ("Puskás", 10, 24),
+       ("Eto'o", 9, 25),
+       ("De Bruyne", 7, 26),
+       ("Iniesta", 6, 27),
+       ("Salah", 11, 28);
+       
+              SELECT * FROM jogadores;
+
+       INSERT INTO estadios (nome, cidade, pais, id_estadio)
+VALUES ("Maracanã", "Rio de Janeiro", "Brasil", 1),
+       ("Allianz Arena", "Munique", "Alemanha", 2),
+       ("Stade de France", "Saint-Denis", "Franca", 3),
+       ("Monumental de Núñez", "Buenos Aires", "Argentina", 4),
+       ("San Siro", "Milão", "Italia", 5),
+       ("Estádio Nacional", "Santiago", "Chile", 6),
+       ("Centenário", "Montevidéu", "Uruguai", 7),
+       ("Wembley", "Londres", "Inglaterra", 8),
+       ("Estádio Azteca", "Cidade do México", "México", 9),
+       ("Estádio Nacional de Varsóvia", "Varsóvia", "Polonia", 10),
+       ("Saitama Stadium 2002", "Saitama", "Japao", 11),
+       ("Baba Yara Stadium", "Kumasi", "Gana", 12),
+       ("Estádio Rodrigo Paz Delgado", "Quito", "Equador", 13),
+       ("Estádio Monumental de Maturín", "Maturín", "Venezuela", 14),
+       ("BMO Field", "Toronto", "Canada", 15),
+       ("Friends Arena", "Solna", "Suecia", 16),
+       ("Lujniki", "Moscou", "Russia", 17),
+       ("Estádio da Luz", "Lisboa", "Portugal", 18),
+       ("Estádio 5 de Julho de 1962", "Argel", "Argelia", 19),
+       ("Estádio de Marraquexe", "Marraquexe", "Marrocos", 20),
+       ("Estádio Rajko Mitić", "Belgrado", "Servia", 21),
+       ("Johan Cruyff Arena", "Amsterdã", "Holanda", 22),
+       ("Seoul World Cup Stadium", "Seul", "Coreia do Sul", 23),
+       ("Puskás Aréna", "Budapeste", "Hungria", 24),
+       ("Estádio de Japoma", "Douala", "Camaroes", 25),
+       ("Estádio Rei Balduíno", "Bruxelas", "Belgica", 26),
+       ("Santiago Bernabéu", "Madri", "Espanha", 27),
+       ("Estádio Internacional do Cairo", "Cairo", "Egito", 28);
+       
+              SELECT * FROM estadios;
+
+
+INSERT INTO partidas(id_partida, id_selecao_a, id_selecao_b, id_estadio, gols_selecao_a, gols_selecao_b, horario, bilheteria)
+VALUES
+(1,1,2,1,2,1,'2026-10-20 19:00:00',1250000.00),
+(2,3,4,2,3,2,'2026-10-21 16:30:00',980000.00),
+(3,5,6,3,1,0,'2026-10-22 20:45:00',850000.00),
+(4,7,8,4,2,1,'2026-10-24 15:00:00',720000.00),
+(5,9,10,5,2,1,'2026-10-25 18:30:00',950000.00),
+(6,11,12,1,1,0,'2026-10-26 14:00:00',680000.00),
+(7,13,14,2,0,2,'2026-10-27 21:15:00',820000.00),
+(8,15,16,3,1,2,'2026-10-28 17:45:00',1120000.00),
+(9,17,18,4,2,0,'2026-10-29 19:30:00',780000.00),
+(10,19,20,5,1,2,'2026-10-30 16:00:00',1030000.00),
+(11,21,22,1,3,1,'2026-11-01 15:30:00',840000.00),
+(12,23,24,2,1,0,'2026-11-02 20:00:00',650000.00),
+(13,25,26,3,2,1,'2026-11-03 18:00:00',760000.00),
+(14,27,28,4,1,0,'2026-11-04 14:30:00',590000.00);
+
+SELECT * FROM partidas;
